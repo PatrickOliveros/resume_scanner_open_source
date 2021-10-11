@@ -29,7 +29,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Refer-d/resume_scanner_open_source">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="Referd_Icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">project_title</h3>
@@ -185,4 +185,4 @@ Project Link: [https://github.com/Refer-d/resume_scanner_open_source](https://gi
 [issues-url]: https://github.com/Refer-d/resume_scanner_open_source/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/26526941/
-[product-screenshot]: Referd_Icon.png
+[product-screenshot]: Screenshot.png

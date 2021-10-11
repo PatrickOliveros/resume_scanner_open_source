@@ -1,0 +1,463 @@
+<head>
+    <style>
+        * {
+            font-family: Gill Sans, sans-serif;
+            text-align: center;
+            color: #5429D0;
+        }
+
+        body {
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+            padding-left: 4vw;
+            padding-right: 4vw;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+        
+        input[type="submit"] {
+            display: none;
+        }
+
+        textarea {
+            display: inline-block;
+            line-height: 1.5;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #ededed;
+            width: 90%;
+            height: 250px;
+            text-align: left;
+            padding: 2%;
+            resize:vertical;
+        }
+
+        tr {
+            height: 50px;
+            border-bottom: 1px solid #ccc;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            margin: auto;
+            font-size: 18px;
+            border-collapse: collapse;
+        }
+
+        div#loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 9999999;
+            display: none;
+            background: url(http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif) no-repeat center center;
+            cursor: wait;
+        }
+
+        #positive {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #00A36C;
+            color: #fefefe;
+            margin: auto;
+        }
+
+        #negative {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #FF0000;
+            color: #fefefe;
+        }
+
+        #checkmark {
+            width: 10%;
+        }
+
+        #nav-left {
+            text-align: left;
+            width: 45%;
+            display: inline-block;
+        }
+
+        #nav-right {
+            text-align: right;
+            width: 45%;
+            display: inline-block;
+        }
+
+        #nav-right a {
+            text-decoration: none;
+            color: #5429D0;
+            padding: 5px;
+        }
+
+        #container {
+            width: 75%;
+            margin: auto;
+        }
+
+        #table-title {
+            font-weight: bold;
+            text-align: left;
+            font-size: 25px;
+        }
+        #header-row {
+            border-bottom-width: 2px;
+            border-color: #5429D0
+        }
+
+        #checkmark {
+            width: 10%;
+        }
+
+        #ats-section {
+            width: 20%;
+            text-align: left;
+            font-weight: 600;
+            padding-left: 2%;
+        }
+
+        #ats-data {
+            width: 60%;
+            text-align: left;
+        }
+
+        #skill-block {
+            width: 30%;
+            text-align: left;
+            padding-left: 2%;
+        }
+
+        .textinput {
+            width: 40%;
+            display: inline-block;
+            vertical-align: text-top;
+        }
+
+        .red {
+            color: #FF0000;
+        }
+
+        #graph {
+            position: relative;
+            margin: 80px;
+            width: 220px;
+            height: 220px;
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #circle-span {
+            color: #5429D0;
+            display: block;
+            line-height: 220px;
+            text-align: center;
+            width: 220px;
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: 100;
+            margin-left: 5px;
+        }
+
+        #output-explained {
+            width: 40%;
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        #output-explained p {
+            text-align: left;
+        }
+
+        #graph-container {
+            width: 40%;
+            display: inline-block;
+        }
+
+        #myBtn {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Fixed/sticky position */
+            bottom: 20px;
+            /* Place the button at the bottom of the page */
+            right: 30px;
+            /* Place the button 30px from the right */
+            z-index: 99;
+            /* Make sure it does not overlap */
+            border: none;
+            /* Remove borders */
+            outline: none;
+            /* Remove outline */
+            background-color: #5429D0;
+            /* Set a background color */
+            color: white;
+            /* Text color */
+            cursor: pointer;
+            /* Add a mouse pointer on hover */
+            padding: 15px;
+            /* Some padding */
+            border-radius: 10px;
+            /* Rounded corners */
+            font-size: 15px;
+            /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+            /* Add a dark-grey background on hover */
+        }
+
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            background: #5429D0;
+            color: white;
+            margin-top: 2%;
+            padding: 12px 12px;
+            cursor:pointer;
+        }
+        .footer{
+            padding: 25px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="nav-left">
+        <a href="https://www.referd.ai/">
+            <img src="//images.squarespace-cdn.com/content/v1/5d9e13413a70c50c67de62ef/1619156648436-MGN1NN24UEHSHDPXSL8V/AudiusAsset+4Trans.png?format=100w,100h" alt="Refer'd - Redefine Recruiting">
+        </a>
+    </div>
+    <div id="nav-right">
+        <a href="https://www.referd.ai/hiring-teams">
+            Hiring Teams
+        </a>
+        <a href="https://www.referd.ai/contact-us">
+            Contact Us
+        </a>
+    </div>
+    <div id="loading"></div>
+    <div>
+    {% if messages %}
+        {% for message in messages %}
+            <m class="red">{{ message }}</m>
+        {% endfor %}
+    {% endif %}
+        <form enctype="multipart/form-data" action="scan/" method="POST">
+            {% csrf_token %}
+            <h1>Resume Scanner</h1>
+            <div class="textinput">
+                <h3>Resume:</h3>
+                {% if last_resume %}
+                    <textarea type="text" name="resume" placeholder="Paste your resume here...&#10;Or upload docx/pdf below">{{last_resume}}</textarea>
+                {% else %}
+                    <textarea type="text" name="resume" placeholder="Paste your resume here...&#10;Or upload docx/pdf below"></textarea>
+                {% endif %}
+                <label class='custom-file-upload'>
+                    <input type="file" name="filename" id="file-upload">
+                    Upload Resume
+                </label>
+                <p id="file-name"><p>
+            </div>
+            <div class="textinput">
+                <h3>Job Description:</h3>
+                <textarea type="text" name="jobpost" placeholder="Paste your job post here..."></textarea>
+            </div>
+            <br/>
+            <label class='custom-file-upload'>
+                <input type="submit" onclick="loading();">
+                Submit
+            </label>
+            {% if out %}
+            {%else%}
+                <br/>
+                <br/>
+                <input type="checkbox" name="term">
+                <label>I agree to the Refer'd <a href="https://www.referd.ai/terms-of-service">Terms of Service</a></label>
+            {% endif %}
+        </form>
+    </div>
+    {% if out %}
+    <div id="container">
+        <h4 id="table-title">Your last scan:</h4>
+        <div id="chart-output">
+            <div id="graph-container"><div class="chart" id="graph" data-percent={{out.lem_skill_up}}></div></div>
+            <div id="output-explained"><p>{{explanation}}</p></div>
+        </div>
+        <h4 id="table-title">ATS Data:</h4>
+        <table>
+            <tr>
+                <td id="ats-section">Phone</td>
+                {% if ats.phone.found %}
+                    <td id="checkmark"><span id="positive">&#10004;</span></td>
+                {% else %}
+                    <td id="checkmark"><span id="negative">X</span></td>
+                {% endif %}
+                <td id="ats-data">{{ats.phone.data}}</td>
+            </tr>
+            <tr>
+                <td id="ats-section">Linkedin</td>
+                {% if ats.linkedin.found %}
+                    <td id="checkmark"><span id="positive">&#10004;</span></td>
+                {% else %}
+                    <td id="checkmark"><span id="negative">X</span></td>
+                {% endif %}
+                <td id="ats-data">{{ats.linkedin.data}}</td>
+            </tr>
+            <tr>
+                <td id="ats-section">Email</td>
+                {% if ats.email.found %}
+                    <td id="checkmark"><span id="positive">&#10004;</span></td>
+                {% else %}
+                    <td id="checkmark"><span id="negative">X</span></td>
+                {% endif %}
+                <td id="ats-data">{{ats.email.data}}</td>
+            </tr>
+            <tr>
+                <td id="ats-section">Education Match</td>
+                {% if ats.degree_match.found %}
+                    <td id="checkmark"><span id="positive">&#10004;</span></td>
+                {% else %}
+                    <td id="checkmark"><span id="negative">X</span></td>
+                {% endif %}
+                <td id="ats-data">{{ats.degree_match.data}}</td>
+            </tr>
+            <tr>
+                <td id="ats-section">Resume Length</td>
+                {% if ats.resume_length.found %}
+                    <td id="checkmark"><span id="positive">&#10004;</span></td>
+                {% else %}
+                    <td id="checkmark"><span id="negative">X</span></td>
+                {% endif %}
+                <td id="ats-data">{{ats.resume_length.data}}</td>
+            </tr>
+            <tr>
+                <td id="ats-section">Years Experience</td>
+                {% if ats.years_exp.found == 'Not Found' %}
+                    <td id="checkmark">-</td>
+                {% elif ats.years_exp.found %}
+                    <td id="checkmark"><span id="positive">&#10004;</span></td>
+                {% else %}
+                    <td id="checkmark"><span id="negative">X</span></td>
+                {% endif %}
+                <td id="ats-data">{{ats.years_exp.data}}</td>
+            </tr>
+        </table>
+        <h4 id="table-title">Skill Matches:</h4>
+        <table>
+            <tr id="header-row">
+                <th id="skill-block">Skill</th>
+                <th>Job Count</th>
+                <th>Resume Count</th>
+                <th>Skill Gap</th>
+            </tr>
+            {% for skill in skills %}
+                <tr>
+                    <td id="skill-block">{{skill.skill}}</td>
+                    <td id="count">{{skill.job}}</td>
+                    <td id="count">{{skill.resume}}</td>
+                    {% if skill.difference == True %}
+                        <td id="checkmark"><span id="positive">&#10004;</span></td>
+                    {% elif skill.difference < 0 %}
+                        <td id="checkmark"><span id="negative">{{skill.difference}}</span></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+    </div>
+    {% endif %}
+    <script type="text/javascript">
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();       
+        }
+        var el = document.getElementById('graph'); // get canvas
+        if(el){
+            var options = {
+                percent:  el.getAttribute('data-percent') || 25,
+                size: el.getAttribute('data-size') || 220,
+                lineWidth: el.getAttribute('data-line') || 30,
+                rotate: el.getAttribute('data-rotate') || 0
+            }
+            var canvas = document.createElement('canvas');
+            var span = document.createElement('span');
+            span.setAttribute("id", "circle-span");
+            span.textContent = options.percent + '%';
+            if (typeof(G_vmlCanvasManager) !== 'undefined') {
+                G_vmlCanvasManager.initElement(canvas);
+            }
+            var ctx = canvas.getContext('2d');
+            canvas.width = canvas.height = options.size;
+            el.appendChild(span);
+            el.appendChild(canvas);
+            ctx.translate(options.size / 2, options.size / 2); // change center
+            ctx.rotate((-1 / 2 + options.rotate / 180) * Math.PI); // rotate -90 deg
+            //imd = ctx.getImageData(0, 0, 240, 240);
+            var radius = (options.size - options.lineWidth) / 2;
+            var drawCircle = function(color, lineWidth, percent) {
+                    percent = Math.min(Math.max(0, percent || 1), 1);
+                    ctx.beginPath();
+                    ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, false);
+                    ctx.strokeStyle = color;
+                    ctx.lineCap = 'square'; // butt, round or square
+                    ctx.lineWidth = lineWidth
+                    ctx.stroke();
+            };
+            drawCircle('#efefef', options.lineWidth, 100 / 100);
+            drawCircle('#5429D0', options.lineWidth, options.percent / 100);
+        }
+        mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+                }
+        }
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        document.querySelector("#file-upload").onchange = function(){
+            document.querySelector("#file-name").textContent = this.files[0].name;
+        }
+    </script>
+    <script type="text/javascript">
+    _linkedin_partner_id = "3514412";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3514412&fmt=gif" />
+    </noscript>
+</body>

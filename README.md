@@ -40,8 +40,6 @@
     <a href="https://github.com/Refer-d/resume_scanner_open_source"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Refer-d/resume_scanner_open_source">View Demo</a>
-    ·
     <a href="https://github.com/Refer-d/resume_scanner_open_source/issues">Report Bug</a>
     ·
     <a href="https://github.com/Refer-d/resume_scanner_open_source/issues">Request Feature</a>

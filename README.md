@@ -17,8 +17,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -164,10 +162,6 @@ Project Link: [https://github.com/Refer-d/resume_scanner_open_source](https://gi
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Refer-d/resume_scanner_open_source.svg?style=for-the-badge
-[contributors-url]: https://github.com/graphs/contributors/Refer-d/resume_scanner_open_source/
-[forks-shield]: https://img.shields.io/github/forks/Refer-d/resume_scanner_open_source.svg?style=for-the-badge
-[forks-url]: 	https://img.shields.io/github/forks/Refer-d/resume_scanner_open_source
 [stars-shield]: https://img.shields.io/github/stars/Refer-d/resume_scanner_open_source.svg?style=for-the-badge
 [stars-url]: https://img.shields.io/github/stars/Refer-d/resume_scanner_open_source
 [issues-shield]: https://img.shields.io/github/issues/Refer-d/resume_scanner_open_source.svg?style=for-the-badge

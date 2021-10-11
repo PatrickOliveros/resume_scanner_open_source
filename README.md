@@ -35,7 +35,7 @@
 <h3 align="center">Refer'd Resume Scanner</h3>
 
   <p align="center">
-    I wanted to share a free resource for your students we built to assist with resume building. Our resume scanner identifies potential skills gaps between resumes and job listings while also serving as a resume checklist.
+    I wanted to share a free resource we built to assist applicants with resume building. Our resume scanner identifies potential skills gaps between resumes and job listings while also serving as a resume checklist.
     <br />
     <a href="https://github.com/Refer-d/resume_scanner_open_source"><strong>Explore the docs »</strong></a>
     <br />
@@ -102,7 +102,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * pip
   ```sh
   pip install -r requirements.txt 
@@ -110,18 +109,17 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/Refer-d/resume_scanner_open_source.git
    ```
-3. Install packages
+2. Install packages
    ```sh
    pip install -r requirements.txt 
    ```
-4. You may need to install additional nltk word libraries
+3. You may need to install additional nltk word libraries
 
-5. Create a config.py file (in the resume_scanner directory) specifying the parameters listed (see example_config.py)
+4. Create a config.py file (in the resume_scanner directory) specifying the parameters listed (see example_config.py)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -136,7 +134,7 @@ REMEMBER this scanner was built to model the ones used in the market today. What
 
 For the most upto date scanner please go to https://resume.referd.ai/resumescanner/
 
-(We try to keep this repository upto date but it often lags behind the live scanner)
+(We try to keep this repository up to date but it often lags behind the live scanner)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -145,8 +143,8 @@ For the most upto date scanner please go to https://resume.referd.ai/resumescann
 <!-- ROADMAP -->
 ## Roadmap
 
-- [] We plan to incorporate a better list of skills
-- [] There are known issues with education being captured as years experience
+- [ ] We plan to incorporate a better list of skills
+- [ ] There are known issues with education being captured as years experience
 
 See the [open issues](https://github.com/Refer-d/resume_scanner_open_source/issues) for a full list of proposed features (and known issues).
 

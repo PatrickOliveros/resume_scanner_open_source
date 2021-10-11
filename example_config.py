@@ -1,4 +1,4 @@
-proj_directory = 'C:/Users/anars/Downloads/resume_scanner_open_source'
+proj_directory = 'C:/PATH/TO/YOUR/PROJECT/DIRECTORY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
@@ -9,10 +9,6 @@ ALLOWED_HOSTS = [
 '*'
 
 ]
-
-static_host = 'XX.XXX.XXX.XXX'
-
-static_user = 'ubuntu'
 
 ##### Local database #####
 

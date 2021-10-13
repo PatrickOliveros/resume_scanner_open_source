@@ -35,11 +35,13 @@
   <p align="center">
     Refer'd is a peer-to-peer hiring platform directly connecting job seekers and actual members of the hiring team. Get your foot in the door at your dream job and learn more about a role from an actual team member. Find your next coworker and utilize your corporate referral bonus.
     <br />
-    <a href="https://www.referd.ai/">Download Refer'd</a>
+    <br />
+    <a href="https://www.referd.ai/"><strong>Download Refer'd</strong></a>
     ·
     <a href="https://www.linkedin.com/company/refer-d">LinkedIn</a>
     .
     <a href="https://www.instagram.com/referd.ai/">Instagram</a>
+    <br />
     <br />
     We wanted to share a free resource we built to assist applicants with resume building. Our resume scanner identifies potential skills gaps between resumes and job listings while also serving as a resume checklist.
     <br />

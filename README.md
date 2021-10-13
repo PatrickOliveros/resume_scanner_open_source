@@ -26,14 +26,22 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Refer-d/resume_scanner_open_source">
+  <a href="https://www.referd.ai/">
     <img src="Referd_Icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Refer'd Resume Scanner</h3>
 
   <p align="center">
-    I wanted to share a free resource we built to assist applicants with resume building. Our resume scanner identifies potential skills gaps between resumes and job listings while also serving as a resume checklist.
+    Refer'd is a peer-to-peer hiring platform directly connecting job seekers and actual members of the hiring team. Get your foot in the door at your dream job and learn more about a role from an actual team member. Find your next coworker and utilize your corporate referral bonus.
+    <br />
+    <a href="https://www.referd.ai/">Download Refer'd</a>
+    ·
+    <a href="https://www.linkedin.com/company/refer-d">LinkedIn</a>
+    .
+    <a href="https://www.instagram.com/referd.ai/">Instagram</a>
+    <br />
+    We wanted to share a free resource we built to assist applicants with resume building. Our resume scanner identifies potential skills gaps between resumes and job listings while also serving as a resume checklist.
     <br />
     <a href="https://github.com/Refer-d/resume_scanner_open_source"><strong>Explore the docs »</strong></a>
     <br />
